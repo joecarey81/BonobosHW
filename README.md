@@ -21,6 +21,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+#### Minimum Requirements
+* node v8.10
+* mysql v5.7
+
 This app requires `mysql` to be installed and running.
 MySQL username and password can be set in `api/.env`, the default username is `root`
 and the default password is blank.  Please change to values that match a username and password
@@ -57,6 +61,8 @@ how many edits are required to make the strings equal.
 
 
 ## Potential Improvements
+
+Remove npm warnings<br/>
 
 I would improve upon the design as I get more familiar with React and Redux.  Learning how to get that working
 didn't leave as much time for me to focus on design of the front end.<br/>

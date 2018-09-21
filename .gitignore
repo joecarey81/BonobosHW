@@ -2,8 +2,6 @@
 .idea
 api/.idea
 react-app/.idea
-api/package-lock.json
-react-app/package-lock.json
 
 # Logs
 logs
