@@ -31,7 +31,7 @@ describe('helpers', () => {
         })
 
         describe('compare whip to jetsetter jeans', () => {
-            it('should return 10', (done) => {
+            it('should be >= 10', (done) => {
                 const distance = getEditDistance('whip', 'jetsetter jeans')
                 distance.should.be.greaterThanOrEqual(10)
                 done()
@@ -39,7 +39,7 @@ describe('helpers', () => {
         })
 
         describe('compare whip to travel jeans', () => {
-            it('should return 10', (done) => {
+            it('should be >= 10', (done) => {
                 const distance = getEditDistance('whip', 'travel jeans')
                 distance.should.be.greaterThanOrEqual(10)
                 done()
@@ -47,7 +47,7 @@ describe('helpers', () => {
         })
 
         describe('compare whip to fireside flannels', () => {
-            it('should return 10', (done) => {
+            it('should be >= 10', (done) => {
                 const distance = getEditDistance('whip', 'fireside flannels')
                 distance.should.be.greaterThanOrEqual(10)
                 done()
