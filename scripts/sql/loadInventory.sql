@@ -1,0 +1,6 @@
+LOAD DATA LOCAL INFILE './scripts/data/inventory.csv'
+INTO TABLE bonobos.inventory
+FIELDS TERMINATED BY ","
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY "\n"
+IGNORE 1 LINES;

@@ -1,0 +1,86 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: Bonobos Homework
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /products:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: products
+    get:
+      description: Returns the product or no product if name not specified
+      # used as the method name of the controller
+      operationId: getProduct
+      parameters:
+      - name: name
+        in: query
+        description: The name of the product
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Product"
+        "204":
+          description: No Data
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  Product:
+    properties:
+      product_id:
+        type: integer
+      product_name:
+        type: string
+      product_image:
+        type: string
+      product_description:
+        type: string
+      styles:
+        type: array
+        items:
+          $ref: '#/definitions/Inventory'
+  Inventory:
+    required:
+    - waist
+    - length
+    - style
+    - count
+    properties:
+      waist:
+        type: integer
+      length:
+        type: integer
+      style:
+        type: string
+      count:
+        type: integer
+        minimum: 0
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

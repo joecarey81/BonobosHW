@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+input[type=search] {
+    width: 50%;
+    padding: 6px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    border: none;
+}
+
+button {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+}
+
+.content {
+    padding-top: 60px;
+}
+
+.product-details {
+    width: 100%;
+    display: block;
+}
+
+.product-image {
+    width: auto;
+    height: 300px;
+    padding: 20px;
+}
+
+.product-description {
+    width: 40%;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+}
+
+.product-name {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 20px 20px 0px 20px;
+}
+
+.inventory-detail {
+    width: 100%;
+}
+
+.search {
+    height: 50px;
+    float: left;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: #333333;
+}
+
+
+td {
+    padding: 5px 30px 5px 0px;
+}
+
+tr:hover {
+    background-color: #ffff99;
+}
+
+th {
+    background-color: white;
+    text-align: left;
+    padding: 5px 30px 5px 0px;
+}
+
+.inventory-detail {
+    padding: 0px 20px 10px 20px;
+}
